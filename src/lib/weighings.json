@@ -1,54 +1,58 @@
 [
-	{
-		"day": 0,
-		"weightInLbs": 90
-	},
-	{
-		"day": 4,
-		"weightInLbs": 94
-	},
-	{
-		"day": 7,
-		"weightInLbs": 101
-	},
-	{
-		"day": 10,
-		"weightInLbs": 106
-	},
-	{
-		"day": 14,
-		"weightInLbs": 120
-	},
-	{
-		"day": 17,
-		"weightInLbs": 126
-	},
-	{
-		"day": 21,
-		"weightInLbs": 133
-	},
-	{
-		"day": 27,
-		"weightInLbs": 141
-	},
-	{
-		"day": 34,
-		"weightInLbs": 144
-	},
-	{
-		"day": 43,
-		"weightInLbs": 147
-	},
-	{
-		"day": 48,
-		"weightInLbs": 149
-	},
-	{
-		"day": 50,
-		"weightInLbs": 154
-	},
-	{
-		"day": 55,
-		"weightInLbs": 165
-	}
+  {
+    "day": 0,
+    "weightInLbs": 90
+  },
+  {
+    "day": 4,
+    "weightInLbs": 94
+  },
+  {
+    "day": 7,
+    "weightInLbs": 101
+  },
+  {
+    "day": 10,
+    "weightInLbs": 106
+  },
+  {
+    "day": 14,
+    "weightInLbs": 120
+  },
+  {
+    "day": 17,
+    "weightInLbs": 126
+  },
+  {
+    "day": 21,
+    "weightInLbs": 133
+  },
+  {
+    "day": 27,
+    "weightInLbs": 141
+  },
+  {
+    "day": 34,
+    "weightInLbs": 144
+  },
+  {
+    "day": 43,
+    "weightInLbs": 147
+  },
+  {
+    "day": 48,
+    "weightInLbs": 149
+  },
+  {
+    "day": 50,
+    "weightInLbs": 154
+  },
+  {
+    "day": 55,
+    "weightInLbs": 165
+  },
+  {
+    "day": 58,
+    "weightInLbs": 175
+  }
 ]

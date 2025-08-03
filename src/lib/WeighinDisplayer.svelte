@@ -1,10 +1,16 @@
 <script lang="ts">
-    import { getPublicImageLink } from './asset_utils';
+  import { getPublicImageLink } from './asset_utils';
   import weighings from './weighings.json';
 
   function padNumberLeft(n: number): string {
     let result = `${n}`
     return '0'.repeat(3 - result.length) + result;
+  }
+
+  function firstWeighing() {
+    if (canGoToFirstWeighing) {
+      selectedWeighingIndex = 0
+    }
   }
 
   function previousWeighing() {
@@ -19,11 +25,46 @@
     }
   }
 
+  function lastWeighing() {
+    if (canGoToLastWeighing) {
+      selectedWeighingIndex = weighings.length - 1
+    }
+  }
+
+  let isPlaying = $state(false)
+  let currentPlayNumber = $state(0)
+
   let selectedWeighingIndex = $state(weighings.length - 1)
   let imageName = $derived(`${padNumberLeft(selectedWeighingIndex + 1)}.png`)
 
-  let canGoToPreviousWeighing = $derived(selectedWeighingIndex > 0);
-  let canGoToNextWeighing = $derived(selectedWeighingIndex < weighings.length - 1);
+  let canGoToFirstWeighing = $derived(!isPlaying && selectedWeighingIndex != 0);
+  let canGoToPreviousWeighing = $derived(!isPlaying && selectedWeighingIndex > 0);
+  let canGoToNextWeighing = $derived(!isPlaying && selectedWeighingIndex < weighings.length - 1);
+  let canGoToLastWeighing = $derived(!isPlaying && selectedWeighingIndex != weighings.length - 1);
+
+  function togglePlayFromFirst() {
+    if (isPlaying) {
+      isPlaying = false
+      return
+    }
+    firstWeighing()
+    isPlaying = true
+    queueNextPic(++currentPlayNumber)
+  }
+
+  function queueNextPic(playNumber: number) {
+    if (selectedWeighingIndex === weighings.length - 1) {
+      isPlaying = false
+      return;
+    }
+    const delay = (weighings[selectedWeighingIndex + 1].day - weighings[selectedWeighingIndex].day) * 100
+    setTimeout(() => {
+      if (isPlaying && playNumber === currentPlayNumber) {
+        selectedWeighingIndex++
+        queueNextPic(playNumber)
+      }
+    }, delay)
+  }
 
 </script>
 
@@ -37,8 +78,11 @@
 </div>
 
 <div class="buttons-wrapper">
-  <button onclick="{previousWeighing}" disabled={!canGoToPreviousWeighing} class="weighings__button"> previous </button>
-  <button onclick="{nextWeighing}" disabled={!canGoToNextWeighing} class="weighings__button" > next </button>
+  <button onclick="{firstWeighing}" disabled={!canGoToFirstWeighing} class="weighings__button"> &lt;&lt; </button>
+  <button onclick="{previousWeighing}" disabled={!canGoToPreviousWeighing} class="weighings__button"> &lt; </button>
+  <button onclick="{togglePlayFromFirst}" class="weighings__button"> {isPlaying ? "pause" : "play from first"} </button>
+  <button onclick="{nextWeighing}" disabled={!canGoToNextWeighing} class="weighings__button" > &gt; </button>
+  <button onclick="{lastWeighing}" disabled={!canGoToLastWeighing} class="weighings__button" > &gt;&gt; </button>
 </div>
 
 <div class="text-wrapper">

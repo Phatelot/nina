@@ -109,7 +109,37 @@
 .image-wrapper {
   position: relative;
   display: inline-block;
-  width: 40%; /* or max-width: 600px; */
+  width: 32%; /* or max-width: 600px; */
+}
+
+@media (width <= 1500px) {
+  .image-wrapper {
+    width: 40%;
+  }
+}
+
+@media (width <= 1224px) {
+  .image-wrapper {
+    width: 50%;
+  }
+}
+
+@media (width <= 968px) {
+  .image-wrapper {
+    width: 70%;
+  }
+}
+
+@media (width <= 800px) {
+  .image-wrapper {
+    width: 80%;
+  }
+}
+
+@media (width <= 600px) {
+  .image-wrapper {
+    width: 95%;
+  }
 }
 
 .buttons-wrapper {
@@ -119,6 +149,8 @@
 
 .text-wrapper {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
 }
 
@@ -142,7 +174,7 @@
 
 .weighings__button {
   -webkit-text-stroke-width: 0;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
 }
 
 .title {

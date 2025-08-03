@@ -3,7 +3,7 @@ html, body {
 	margin: 0;
 }
 
-body {
+body, main {
 	background: linear-gradient(0.125turn, #2478ff, #98fffe);
 	background-repeat: no-repeat;
 	background-attachment: fixed;

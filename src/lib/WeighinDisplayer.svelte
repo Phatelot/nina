@@ -1,6 +1,8 @@
 <script lang="ts">
   import { getPublicImageLink } from './asset_utils';
+    import { ninasBMIForWeight } from './nina_stats';
   import weighings from './weighings.json';
+    import { formatBMI, toBMICategory } from './weight_utils';
 
   function padNumberLeft(n: number): string {
     let result = `${n}`
@@ -36,6 +38,8 @@
 
   let selectedWeighingIndex = $state(weighings.length - 1)
   let imageName = $derived(`${padNumberLeft(selectedWeighingIndex + 1)}.png`)
+  let nextImageName = $derived(`${padNumberLeft(selectedWeighingIndex + 2)}.png`)
+  let nextNextImageName = $derived(`${padNumberLeft(selectedWeighingIndex + 3)}.png`)
 
   let canGoToFirstWeighing = $derived(!isPlaying && selectedWeighingIndex != 0);
   let canGoToPreviousWeighing = $derived(!isPlaying && selectedWeighingIndex > 0);
@@ -57,7 +61,7 @@
       isPlaying = false
       return;
     }
-    const delay = (weighings[selectedWeighingIndex + 1].day - weighings[selectedWeighingIndex].day) * 100
+    const delay = (weighings[selectedWeighingIndex + 1].day - weighings[selectedWeighingIndex].day) * 50
     setTimeout(() => {
       if (isPlaying && playNumber === currentPlayNumber) {
         selectedWeighingIndex++
@@ -73,7 +77,13 @@
 <div class="image-wrapper-wrapper">
   <div class="image-wrapper">
     <img src="{getPublicImageLink(imageName)}" class="front" alt="Nina weighing herself">
-    <img src="{getPublicImageLink("scale.png")}" class="back" alt="the scale Nina use to weigh herself"/>
+    {#if selectedWeighingIndex < weighings.length - 1}
+      <img src="{getPublicImageLink(nextImageName)}" class="next__image front" aria-hidden="true" alt="next image">
+      {#if selectedWeighingIndex < weighings.length - 2}
+        <img src="{getPublicImageLink(nextNextImageName)}" class="next__image front" aria-hidden="true" alt="next next image">
+      {/if}
+    {/if}
+    <img src="{getPublicImageLink("scale.png")}" class="back" alt="the scale Nina uses to weigh herself"/>
   </div>
 </div>
 
@@ -86,7 +96,8 @@
 </div>
 
 <div class="text-wrapper">
-  <p style="color: black">Nina weighs {weighings[selectedWeighingIndex].weightInLbs}lbs</p>
+  <p style="color: black">Nina weighs {weighings[selectedWeighingIndex].weightInLbs}lbs.</p>
+  <p style="color: black">She is {toBMICategory(ninasBMIForWeight(weighings[selectedWeighingIndex].weightInLbs))} (BMI: {formatBMI(ninasBMIForWeight(weighings[selectedWeighingIndex].weightInLbs))}).</p>
 </div>
 
 <style>
@@ -139,6 +150,12 @@
 	-webkit-text-stroke-color: white;
 	-webkit-text-stroke-width: 3px;
 	font-weight: 700;
+}
+
+.next__image {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
 }
 
 </style>

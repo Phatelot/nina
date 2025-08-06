@@ -70,6 +70,17 @@
     }, delay)
   }
 
+  function onKeyDown(e) {
+    switch (e.keyCode) {
+      case 37:
+        previousWeighing();
+        return;
+      case 39:
+        nextWeighing();
+        return;
+    }
+  }
+
 </script>
 
 <h2 class="title">Day {weighings[selectedWeighingIndex].day}</h2>
@@ -99,6 +110,8 @@
   <p style="color: black">Nina weighs {weighings[selectedWeighingIndex].weightInLbs}lbs.</p>
   <p style="color: black">She is {toBMICategory(ninasBMIForWeight(weighings[selectedWeighingIndex].weightInLbs))} (BMI: {formatBMI(ninasBMIForWeight(weighings[selectedWeighingIndex].weightInLbs))}).</p>
 </div>
+
+<svelte:window on:keydown={onKeyDown} />
 
 <style>
 .image-wrapper-wrapper {

@@ -201,6 +201,7 @@
   opacity: 0;
   width: 1px;
   height: 1px;
+  position: absolute;
 }
 
 </style>

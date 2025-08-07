@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Chart from './lib/Chart.svelte';
   import WeighinDisplayer from './lib/WeighinDisplayer.svelte'
 
   let hash = $state(getHash());
@@ -20,6 +21,7 @@
   // Route table
   const routes = {
     '/': WeighinDisplayer,
+    '/chart': Chart,
   };
 
   // Pick the component based on the current hash
@@ -34,6 +36,7 @@
     </ul>
     <ul>
       <li><a href="#/" onclick={() => navigate('/')} class="nav__item">Weigh-ins</a></li>
+      <li><a href="#/chart" onclick={() => navigate('/chart')} class="nav__item">Chart</a></li>
     </ul>
   </nav>
 

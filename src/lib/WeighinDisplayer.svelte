@@ -1,12 +1,11 @@
 <script lang="ts">
   import { getPublicImageLink } from './asset_utils';
-    import { ninasBMIForWeight } from './nina_stats';
+  import { ninasBMIForWeight } from './nina_stats';
   import weighings from './weighings.json';
-    import { formatBMI, toBMICategory } from './weight_utils';
+  import { formatBMI, toBMICategory } from './weight_utils';
 
   function padNumberLeft(n: number): string {
-    let result = `${n}`
-    return '0'.repeat(3 - result.length) + result;
+    return `${n}`.padStart(3, '0');
   }
 
   function firstWeighing() {
@@ -70,12 +69,12 @@
     }, delay)
   }
 
-  function onKeyDown(e) {
-    switch (e.keyCode) {
-      case 37:
+  function onKeyDown(e: KeyboardEvent) {
+    switch (e.key) {
+      case "ArrowLeft":
         previousWeighing();
         return;
-      case 39:
+      case "ArrowRight":
         nextWeighing();
         return;
     }

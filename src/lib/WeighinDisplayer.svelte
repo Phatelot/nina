@@ -1,6 +1,8 @@
 <script lang="ts">
   import { getPublicImageLink } from './asset_utils';
   import { ninasBMIForWeight } from './nina_stats';
+  import PlayOptions from './PlayOptions.svelte';
+  import { delayForLinearWgSpeed, delayForSpeed, playSpeeds, type PlaySpeed } from './PlaySpeed';
   import weighings from './weighings.json';
   import { formatBMI, toBMICategory } from './weight_utils';
 
@@ -34,6 +36,8 @@
 
   let isPlaying = $state(false)
   let currentPlayNumber = $state(0)
+  let selectedSpeed: PlaySpeed = $state('default')
+  let linearWg = $state(false);
 
   let selectedWeighingIndex = $state(weighings.length - 1)
   let imageName = $derived(`${padNumberLeft(selectedWeighingIndex + 1)}.png`)
@@ -60,7 +64,9 @@
       isPlaying = false
       return;
     }
-    const delay = (weighings[selectedWeighingIndex + 1].day - weighings[selectedWeighingIndex].day) * 50
+    const delay = linearWg ?
+    (weighings[selectedWeighingIndex + 1].weightInLbs - weighings[selectedWeighingIndex].weightInLbs) * delayForLinearWgSpeed(selectedSpeed) :
+    (weighings[selectedWeighingIndex + 1].weightInLbs - weighings[selectedWeighingIndex].weightInLbs) * delayForSpeed(selectedSpeed)
     setTimeout(() => {
       if (isPlaying && playNumber === currentPlayNumber) {
         selectedWeighingIndex++
@@ -109,6 +115,8 @@
   <p style="color: black">Nina weighs {weighings[selectedWeighingIndex].weightInLbs}lbs.</p>
   <p style="color: black">She is {toBMICategory(ninasBMIForWeight(weighings[selectedWeighingIndex].weightInLbs))} (BMI: {formatBMI(ninasBMIForWeight(weighings[selectedWeighingIndex].weightInLbs))}).</p>
 </div>
+
+<PlayOptions bind:speed={selectedSpeed} {linearWg}></PlayOptions>
 
 <svelte:window on:keydown={onKeyDown} />
 

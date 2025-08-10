@@ -1,38 +1,11 @@
 <script lang="ts">
-  import { getPublicImageLink } from './asset_utils';
+  import IndexSelector from './IndexSelector.svelte';
+  import Nina from './Nina.svelte';
   import { ninasBMIForWeight } from './nina_stats';
   import PlayOptions from './PlayOptions.svelte';
-  import { delayForLinearWgSpeed, delayForSpeed, playSpeeds, type PlaySpeed } from './PlaySpeed';
+  import { delayForLinearWgSpeed, delayForSpeed, type PlaySpeed } from './PlaySpeed';
   import weighings from './weighings.json';
   import { formatBMI, toBMICategory } from './weight_utils';
-
-  function padNumberLeft(n: number): string {
-    return `${n}`.padStart(3, '0');
-  }
-
-  function firstWeighing() {
-    if (canGoToFirstWeighing) {
-      selectedWeighingIndex = 0
-    }
-  }
-
-  function previousWeighing() {
-    if (canGoToPreviousWeighing) {
-      selectedWeighingIndex--
-    }
-  }
-
-  function nextWeighing() {
-    if (canGoToNextWeighing) {
-      selectedWeighingIndex++
-    }
-  }
-
-  function lastWeighing() {
-    if (canGoToLastWeighing) {
-      selectedWeighingIndex = weighings.length - 1
-    }
-  }
 
   let isPlaying = $state(false)
   let currentPlayNumber = $state(0)
@@ -40,21 +13,13 @@
   let linearWg = $state(false);
 
   let selectedWeighingIndex = $state(weighings.length - 1)
-  let imageName = $derived(`${padNumberLeft(selectedWeighingIndex + 1)}.png`)
-  let nextImageName = $derived(`${padNumberLeft(selectedWeighingIndex + 2)}.png`)
-  let nextNextImageName = $derived(`${padNumberLeft(selectedWeighingIndex + 3)}.png`)
-
-  let canGoToFirstWeighing = $derived(!isPlaying && selectedWeighingIndex != 0);
-  let canGoToPreviousWeighing = $derived(!isPlaying && selectedWeighingIndex > 0);
-  let canGoToNextWeighing = $derived(!isPlaying && selectedWeighingIndex < weighings.length - 1);
-  let canGoToLastWeighing = $derived(!isPlaying && selectedWeighingIndex != weighings.length - 1);
 
   function togglePlayFromFirst() {
     if (isPlaying) {
       isPlaying = false
       return
     }
-    firstWeighing()
+    selectedWeighingIndex = 0
     isPlaying = true
     queueNextPic(++currentPlayNumber)
   }
@@ -74,42 +39,17 @@
       }
     }, delay)
   }
-
-  function onKeyDown(e: KeyboardEvent) {
-    switch (e.key) {
-      case "ArrowLeft":
-        previousWeighing();
-        return;
-      case "ArrowRight":
-        nextWeighing();
-        return;
-    }
-  }
-
 </script>
 
 <h2 class="title">Day {weighings[selectedWeighingIndex].day}</h2>
 
-<div class="image-wrapper-wrapper">
-  <div class="image-wrapper">
-    <img src="{getPublicImageLink(imageName)}" class="front" alt="Nina weighing herself">
-    {#if selectedWeighingIndex < weighings.length - 1}
-      <img src="{getPublicImageLink(nextImageName)}" class="next__image front" aria-hidden="true" alt="next image">
-      {#if selectedWeighingIndex < weighings.length - 2}
-        <img src="{getPublicImageLink(nextNextImageName)}" class="next__image front" aria-hidden="true" alt="next next image">
-      {/if}
-    {/if}
-    <img src="{getPublicImageLink("scale.png")}" class="back" alt="the scale Nina uses to weigh herself"/>
-  </div>
-</div>
+<Nina weighingIndex={selectedWeighingIndex} size='L'/>
 
-<div class="buttons-wrapper">
-  <button onclick="{firstWeighing}" disabled={!canGoToFirstWeighing} class="weighings__button"> &lt;&lt; </button>
-  <button onclick="{previousWeighing}" disabled={!canGoToPreviousWeighing} class="weighings__button"> &lt; </button>
-  <button onclick="{togglePlayFromFirst}" class="weighings__button"> {isPlaying ? "pause" : "play from first"} </button>
-  <button onclick="{nextWeighing}" disabled={!canGoToNextWeighing} class="weighings__button" > &gt; </button>
-  <button onclick="{lastWeighing}" disabled={!canGoToLastWeighing} class="weighings__button" > &gt;&gt; </button>
-</div>
+{#snippet middleButton()}
+  <button onclick="{togglePlayFromFirst}" class="play__button"> {isPlaying ? "pause" : "play from first"} </button>
+{/snippet}
+
+<IndexSelector minValue={0} maxValue={weighings.length - 1} bind:currentValue={selectedWeighingIndex} disabled={isPlaying} listenForKeyboardEvents={true} {middleButton}/>
 
 <div class="text-wrapper">
   <p style="color: black">Nina weighs {weighings[selectedWeighingIndex].weightInLbs}lbs.</p>
@@ -118,54 +58,7 @@
 
 <PlayOptions bind:speed={selectedSpeed} {linearWg}></PlayOptions>
 
-<svelte:window on:keydown={onKeyDown} />
-
 <style>
-.image-wrapper-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.image-wrapper {
-  position: relative;
-  display: inline-block;
-  width: 32%; /* or max-width: 600px; */
-}
-
-@media (width <= 1500px) {
-  .image-wrapper {
-    width: 40%;
-  }
-}
-
-@media (width <= 1224px) {
-  .image-wrapper {
-    width: 50%;
-  }
-}
-
-@media (width <= 968px) {
-  .image-wrapper {
-    width: 70%;
-  }
-}
-
-@media (width <= 800px) {
-  .image-wrapper {
-    width: 80%;
-  }
-}
-
-@media (width <= 600px) {
-  .image-wrapper {
-    width: 95%;
-  }
-}
-
-.buttons-wrapper {
-  display: flex;
-  justify-content: space-evenly;
-}
 
 .text-wrapper {
   display: flex;
@@ -174,27 +67,9 @@
   justify-content: space-evenly;
 }
 
-.front {
-  width: 100%;
-  height: auto;
-  display: block;
-  position: relative;
-  z-index: 2;
-  transform: translateY(-10%);
-}
-
-.back {
-  position: absolute;
-  z-index: 1;
-  width: 60%; /* scale responsively */
-  bottom: -3%; /* or use calc(), or tune this as needed */
-  left: 40%;
-  transform: translateX(-50%);
-}
-
-.weighings__button {
-  -webkit-text-stroke-width: 0;
+.play__button {
   margin-bottom: 1%;
+  -webkit-text-stroke-width: 0;
 }
 
 .title {
@@ -202,13 +77,6 @@
 	-webkit-text-stroke-color: white;
 	-webkit-text-stroke-width: 3px;
 	font-weight: 700;
-}
-
-.next__image {
-  opacity: 0;
-  width: 1px;
-  height: 1px;
-  position: absolute;
 }
 
 </style>

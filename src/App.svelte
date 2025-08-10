@@ -1,4 +1,5 @@
 <script lang="ts">
+  import BeforeAfter from './lib/BeforeAfter.svelte';
   import Chart from './lib/Chart.svelte';
   import WeighinDisplayer from './lib/WeighinDisplayer.svelte'
 
@@ -22,6 +23,7 @@
   const routes = {
     '/': WeighinDisplayer,
     '/chart': Chart,
+    '/before-afters': BeforeAfter,
   };
 
   // Pick the component based on the current hash
@@ -36,6 +38,7 @@
     </ul>
     <ul>
       <li><a href="#/" onclick={() => navigate('/')} class="nav__item">Weigh-ins</a></li>
+      <li><a href="#/before-afters" onclick={() => navigate('/before-afters')} class="nav__item">Before/Afters</a></li>
       <li><a href="#/chart" onclick={() => navigate('/chart')} class="nav__item">Chart</a></li>
     </ul>
   </nav>
@@ -50,5 +53,10 @@
 	-webkit-text-stroke-color: white;
 	-webkit-text-stroke-width: 2px;
 	font-weight: 700;
+}
+
+nav {
+  position: relative;
+  z-index: 10;
 }
 </style>

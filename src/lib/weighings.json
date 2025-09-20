@@ -4,217 +4,346 @@
     {
       "day": 0,
       "weightInLbs": 90,
-      "scale": 1
+      "scale": 1,
+      "shorts": 0,
+      "shirt": 0,
+      "plateau": 0
     },
     {
       "day": 4,
       "weightInLbs": 94,
-      "scale": 1
+      "scale": 1,
+      "shorts": 0,
+      "shirt": 0,
+      "plateau": 0
     },
     {
       "day": 7,
       "weightInLbs": 101,
-      "scale": 1
+      "scale": 1,
+      "shorts": 0,
+      "shirt": 0,
+      "plateau": 0
     },
     {
       "day": 10,
       "weightInLbs": 106,
-      "scale": 1
+      "scale": 1,
+      "shorts": 0,
+      "shirt": 0,
+      "plateau": 0
     },
     {
       "day": 14,
       "weightInLbs": 120,
-      "scale": 1
+      "scale": 1,
+      "shorts": 1,
+      "shirt": 0,
+      "plateau": 0
     },
     {
       "day": 17,
       "weightInLbs": 126,
-      "scale": 1
+      "scale": 1,
+      "shorts": 1,
+      "shirt": 0,
+      "plateau": 0
     },
     {
       "day": 21,
       "weightInLbs": 133,
-      "scale": 1
+      "scale": 1,
+      "shorts": 1,
+      "shirt": 0,
+      "plateau": 0
     },
     {
       "day": 27,
       "weightInLbs": 141,
-      "scale": 1
+      "scale": 1,
+      "shorts": 1,
+      "shirt": 0,
+      "plateau": 0
     },
     {
       "day": 34,
       "weightInLbs": 144,
-      "scale": 1
+      "scale": 1,
+      "shorts": 1,
+      "shirt": 0,
+      "plateau": 0
     },
     {
       "day": 43,
       "weightInLbs": 147,
-      "scale": 1
+      "scale": 1,
+      "shorts": 1,
+      "shirt": 0,
+      "plateau": 0
     },
     {
       "day": 48,
       "weightInLbs": 149,
-      "scale": 1
+      "scale": 1,
+      "shorts": 1,
+      "shirt": 0,
+      "plateau": 1
     },
     {
       "day": 50,
       "weightInLbs": 154,
-      "scale": 1
+      "scale": 1,
+      "shorts": 1,
+      "shirt": 0,
+      "plateau": 1
     },
     {
       "day": 55,
       "weightInLbs": 165,
-      "scale": 1
+      "scale": 1,
+      "shorts": 2,
+      "shirt": 1,
+      "plateau": 1
     },
     {
       "day": 58,
       "weightInLbs": 175,
-      "scale": 1
+      "scale": 1,
+      "shorts": 2,
+      "shirt": 1,
+      "plateau": 1
     },
     {
       "day": 60,
       "weightInLbs": 181,
-      "scale": 1
+      "scale": 1,
+      "shorts": 2,
+      "shirt": 1,
+      "plateau": 1
     },
     {
       "day": 63,
       "weightInLbs": 188,
-      "scale": 1
+      "scale": 1,
+      "shorts": 2,
+      "shirt": 1,
+      "plateau": 1
     },
     {
       "day": 65,
       "weightInLbs": 191,
-      "scale": 1
+      "scale": 1,
+      "shorts": 2,
+      "shirt": 1,
+      "plateau": 1
     },
     {
       "day": 66,
       "weightInLbs": 195,
-      "scale": 1
+      "scale": 1,
+      "shorts": 2,
+      "shirt": 1,
+      "plateau": 1
     },
     {
       "day": 69,
       "weightInLbs": 200,
-      "scale": 1
+      "scale": 1,
+      "shorts": 2,
+      "shirt": 1,
+      "plateau": 1
     },
     {
       "day": 79,
       "weightInLbs": 205,
-      "scale": 1
+      "scale": 1,
+      "shorts": 2,
+      "shirt": 1,
+      "plateau": 1
     },
     {
       "day": 88,
       "weightInLbs": 209,
-      "scale": 1
+      "scale": 1,
+      "shorts": 2,
+      "shirt": 1,
+      "plateau": 1
     },
     {
       "day": 93,
       "weightInLbs": 210,
-      "scale": 1
+      "scale": 1,
+      "shorts": 2,
+      "shirt": 1,
+      "plateau": 2
     },
     {
       "day": 94,
       "weightInLbs": 214,
-      "scale": 1
+      "scale": 1,
+      "shorts": 2,
+      "shirt": 1,
+      "plateau": 2
     },
     {
       "day": 95,
       "weightInLbs": 218,
-      "scale": 1
+      "scale": 1,
+      "shorts": 2,
+      "shirt": 1,
+      "plateau": 2
     },
     {
       "day": 96,
       "weightInLbs": 221,
-      "scale": 1
+      "scale": 1,
+      "shorts": 3,
+      "shirt": 1,
+      "plateau": 2
     },
     {
       "day": 97,
       "weightInLbs": 225,
-      "scale": 1
+      "scale": 1,
+      "shorts": 3,
+      "shirt": 1,
+      "plateau": 2
     },
     {
       "day": 98,
       "weightInLbs": 228,
-      "scale": 1
+      "scale": 1,
+      "shorts": 3,
+      "shirt": 1,
+      "plateau": 2
     },
     {
       "day": 99,
       "weightInLbs": 231,
-      "scale": 1
+      "scale": 1,
+      "shorts": 3,
+      "shirt": 1,
+      "plateau": 2
     },
     {
       "day": 100,
       "weightInLbs": 235,
-      "scale": 1
+      "scale": 1,
+      "shorts": 3,
+      "shirt": 1,
+      "plateau": 2
     },
     {
       "day": 101,
       "weightInLbs": 239,
-      "scale": 1
+      "scale": 1,
+      "shorts": 3,
+      "shirt": 1,
+      "plateau": 2
     },
     {
       "day": 105,
       "weightInLbs": 250,
-      "scale": 1
+      "scale": 1,
+      "shorts": 3,
+      "shirt": 1,
+      "plateau": 2
     },
     {
       "day": 107,
       "weightInLbs": 254,
-      "scale": 1
+      "scale": 1,
+      "shorts": 3,
+      "shirt": 1,
+      "plateau": 2
     },
     {
       "day": 110,
       "weightInLbs": 260,
-      "scale": 1
+      "scale": 1,
+      "shorts": 3,
+      "shirt": 2,
+      "plateau": 2
     },
     {
       "day": 117,
       "weightInLbs": 263,
-      "scale": 1
+      "scale": 1,
+      "shorts": 3,
+      "shirt": 2,
+      "plateau": 2
     },
     {
       "day": 124,
       "weightInLbs": 266,
-      "scale": 1
+      "scale": 1,
+      "shorts": 3,
+      "shirt": 2,
+      "plateau": 2
     },
     {
       "day": 132,
       "weightInLbs": 269,
-      "scale": 1
+      "scale": 1,
+      "shorts": 3,
+      "shirt": 2,
+      "plateau": 2
     },
     {
       "day": 135,
       "weightInLbs": 272,
-      "scale": 1
+      "scale": 1,
+      "shorts": 3,
+      "shirt": 2,
+      "plateau": 3
     },
     {
       "day": 136,
       "weightInLbs": 276,
-      "scale": 1
+      "scale": 1,
+      "shorts": 3,
+      "shirt": 2,
+      "plateau": 3
     },
     {
       "day": 137,
       "weightInLbs": 279,
-      "scale": 1
+      "scale": 1,
+      "shorts": 3,
+      "shirt": 2,
+      "plateau": 3
     },
     {
       "day": 138,
       "weightInLbs": 283,
-      "scale": 1
+      "scale": 1,
+      "shorts": 3,
+      "shirt": 2,
+      "plateau": 3
     },
     {
       "day": 139,
       "weightInLbs": 287,
-      "scale": 1
+      "scale": 1,
+      "shorts": 3,
+      "shirt": 2,
+      "plateau": 3
     },
     {
       "day": 140,
       "weightInLbs": 291,
-      "scale": 1
+      "scale": 1,
+      "shorts": 3,
+      "shirt": 2,
+      "plateau": 3
     },
     {
       "day": 141,
       "weightInLbs": 294,
-      "scale": 1
+      "scale": 1,
+      "shorts": 3,
+      "shirt": 2,
+      "plateau": 3
     }
   ]
 }

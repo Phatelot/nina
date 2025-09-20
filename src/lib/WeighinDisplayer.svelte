@@ -13,6 +13,7 @@
   let linearWg = $state(false);
 
   let selectedWeighingIndex = $state(weighings.length - 1)
+  let selectedWeighing = $derived(weighings[selectedWeighingIndex])
 
   function togglePlayFromFirst() {
     if (isPlaying) {
@@ -30,8 +31,8 @@
       return;
     }
     const delay = linearWg ?
-    (weighings[selectedWeighingIndex + 1].weightInLbs - weighings[selectedWeighingIndex].weightInLbs) * delayForLinearWgSpeed(selectedSpeed) :
-    (weighings[selectedWeighingIndex + 1].weightInLbs - weighings[selectedWeighingIndex].weightInLbs) * delayForSpeed(selectedSpeed)
+    (weighings[selectedWeighingIndex + 1].weightInLbs - selectedWeighing.weightInLbs) * delayForLinearWgSpeed(selectedSpeed) :
+    (weighings[selectedWeighingIndex + 1].weightInLbs - selectedWeighing.weightInLbs) * delayForSpeed(selectedSpeed)
     setTimeout(() => {
       if (isPlaying && playNumber === currentPlayNumber) {
         selectedWeighingIndex++
@@ -41,7 +42,24 @@
   }
 </script>
 
-<h2 class="title">Day {weighings[selectedWeighingIndex].day}</h2>
+<h2 class="title">Day {selectedWeighing.day}</h2>
+{#if (selectedWeighing.scale + selectedWeighing.shirt + selectedWeighing.shorts + selectedWeighing.plateau- 1) > 0}
+  <div style="position: absolute">
+    <p class="subtitle">Broken</p>
+    {#if selectedWeighing.shorts > 0}
+      <p class="subtitle indented">Shorts: {selectedWeighing.shorts}</p>
+    {/if}
+    {#if selectedWeighing.plateau > 0}
+      <p class="subtitle indented">Plateau{selectedWeighing.plateau > 1 ? "s": ""}: {selectedWeighing.plateau}</p>
+    {/if}
+    {#if selectedWeighing.shirt > 0}
+      <p class="subtitle indented">Shirt{selectedWeighing.shirt > 1 ? "s" : ""}: {selectedWeighing.shirt}</p>
+    {/if}
+    {#if selectedWeighing.scale > 1}
+      <p class="subtitle indented">Scale{selectedWeighing.scale > 1 ? "s": ""}: {selectedWeighing.scale - 1}</p>
+    {/if}
+  </div>
+{/if}
 
 <Nina weighingIndex={selectedWeighingIndex} size='L'/>
 
@@ -52,8 +70,8 @@
 <IndexSelector minValue={0} maxValue={weighings.length - 1} bind:currentValue={selectedWeighingIndex} disabled={isPlaying} listenForKeyboardEvents={true} {middleButton}/>
 
 <div class="text-wrapper">
-  <p style="color: black">Nina weighs {weighings[selectedWeighingIndex].weightInLbs}lbs.</p>
-  <p style="color: black">She is {toBMICategory(ninasBMIForWeight(weighings[selectedWeighingIndex].weightInLbs))} (BMI: {formatBMI(ninasBMIForWeight(weighings[selectedWeighingIndex].weightInLbs))}).</p>
+  <p style="color: black">Nina weighs {selectedWeighing.weightInLbs}lbs.</p>
+  <p style="color: black">She is {toBMICategory(ninasBMIForWeight(selectedWeighing.weightInLbs))} (BMI: {formatBMI(ninasBMIForWeight(weighings[selectedWeighingIndex].weightInLbs))}).</p>
 </div>
 
 <PlayOptions bind:speed={selectedSpeed} {linearWg}></PlayOptions>
@@ -77,6 +95,18 @@
 	-webkit-text-stroke-color: white;
 	-webkit-text-stroke-width: 3px;
 	font-weight: 700;
+}
+
+.subtitle {
+	color: black;
+	-webkit-text-stroke-color: white;
+	-webkit-text-stroke-width: 3px;
+	font-weight: 700;
+  margin-bottom: 0;
+}
+
+.indented {
+  padding-left: 20px;
 }
 
 </style>

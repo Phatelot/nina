@@ -22,6 +22,18 @@
 					"type": "number",
 					"minimum": 0
 				},
+				"shorts": {
+					"type": "number",
+					"minimum": 0
+				},
+				"shirt": {
+					"type": "number",
+					"minimum": 0
+				},
+				"plateau": {
+					"type": "number",
+					"minimum": 0
+				},
 				"scale": {
 					"type": "number",
 					"minimum": 1
@@ -31,7 +43,10 @@
 			"required": [
 				"day",
 				"weightInLbs",
-				"scale"
+				"scale",
+				"shorts",
+				"shirt",
+				"plateau"
 			]
 		}
 	}

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Chart } from "chart.js/auto";
 	import { onMount } from "svelte";
-	import weighings from './weighings.json';
+	import { weighings } from './weighings.json';
 
 	let canvas: HTMLCanvasElement;
 	let chartData = $state({

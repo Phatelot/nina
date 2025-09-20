@@ -1,7 +1,7 @@
 <script lang="ts">
     import Nina from "./Nina.svelte";
     import { ninasBMIForWeight } from "./nina_stats";
-	import weighings from "./weighings.json";
+	import { weighings } from "./weighings.json";
     import { formatBMI, toBMICategory } from "./weight_utils";
 
 	let {

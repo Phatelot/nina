@@ -1,4 +1,4 @@
-import weighings from './weighings.json';
+import { weighings } from './weighings.json';
 
 export const playSpeeds = ["hyper slow", "super slow", "slow", "default", "fast", "very fast"] as const;
 export type PlaySpeed = typeof playSpeeds[number];

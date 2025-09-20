@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getPublicImageLink } from "./asset_utils";
-	import weighings from "./weighings.json";
+	import { weighings } from "./weighings.json";
 
 	function padNumberLeft(n: number): string {
 		return `${n}`.padStart(3, "0");
@@ -17,6 +17,8 @@
 	let imageName = $derived(`${padNumberLeft(weighingIndex + 1)}.png`);
 	let nextImageName = $derived(`${padNumberLeft(weighingIndex + 2)}.png`);
 	let nextNextImageName = $derived(`${padNumberLeft(weighingIndex + 3)}.png`);
+
+	let scaleImageName = $derived(`scale${weighings[weighingIndex].scale}.png`);
 </script>
 
 <div class="image-wrapper-wrapper">
@@ -43,7 +45,7 @@
 			{/if}
 		{/if}
 		<img
-			src={getPublicImageLink("scale.png")}
+			src={getPublicImageLink(scaleImageName)}
 			class="back"
 			alt="the scale Nina uses to weigh herself"
 		/>

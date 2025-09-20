@@ -1,0 +1,38 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"properties": {
+		"weighings": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/Weighing"
+			}
+		}
+	},
+	"title": "Json schema for an event chain",
+	"definitions": {
+		"Weighing": {
+			"type": "object",
+			"properties": {
+				"day": {
+					"type": "number",
+					"minimum": 0
+				},
+				"weightInLbs": {
+					"type": "number",
+					"minimum": 0
+				},
+				"scale": {
+					"type": "number",
+					"minimum": 1
+				}
+			},
+			"additionalProperties": false,
+			"required": [
+				"day",
+				"weightInLbs",
+				"scale"
+			]
+		}
+	}
+}

@@ -1,7 +1,7 @@
 <script lang="ts">
     import IndexSelector from "./IndexSelector.svelte";
     import NinaWithStats from "./NinaWithStats.svelte";
-	import weighings from './weighings.json';
+	import { weighings } from './weighings.json';
 
 	let beforeSelectedWeighingIndex = $state(0)
 	let afterSelectedWeighingIndex = $state(weighings.length - 1)

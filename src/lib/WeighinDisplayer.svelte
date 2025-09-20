@@ -4,7 +4,7 @@
   import { ninasBMIForWeight } from './nina_stats';
   import PlayOptions from './PlayOptions.svelte';
   import { delayForLinearWgSpeed, delayForSpeed, type PlaySpeed } from './PlaySpeed';
-  import weighings from './weighings.json';
+  import { weighings } from './weighings.json';
   import { formatBMI, toBMICategory } from './weight_utils';
 
   let isPlaying = $state(false)

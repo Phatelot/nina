@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { getIndicesForItem, getItems } from "./before_after_of_items";
     import IndexSelector from "./IndexSelector.svelte";
     import NinaWithStats from "./NinaWithStats.svelte";
 	import { weighings } from './weighings.json';
@@ -19,6 +20,19 @@
 			beforeSelectedWeighingIndex = afterSelectedWeighingIndex - 1
 		}
 	}
+
+	function useItemForIndices() {
+		const indices = getIndicesForItem(selectedItem);
+		console.log("OUOUOUOU", selectedItem, indices)
+		updateBefore(indices.first);
+		updateAfter(indices.last);
+	}
+
+	const items = getItems();
+	let selectedItem: {
+		type: "shirt" | "shorts" | "plateau",
+		i: number,
+	} = $state({type: "shirt", i: 0});
 </script>
 
 <div class="wrapper">
@@ -35,6 +49,17 @@
 	<IndexSelector minValue={0} maxValue={weighings.length - 2} bind:currentValue={() => beforeSelectedWeighingIndex, updateBefore} disabled={false} listenForKeyboardEvents={false}/>
 	<IndexSelector minValue={1} maxValue={weighings.length - 1} bind:currentValue={() => afterSelectedWeighingIndex, updateAfter} disabled={false} listenForKeyboardEvents={false}/>
 </div>
+
+<form>
+	<label for="ba-falo-select">First and last appearance of...</label>
+    <select style="font-weight: 600;" id="ba-falo-select" bind:value={selectedItem} onchange={() => useItemForIndices()}>
+      {#each items as item}
+        <option style="font-weight: 600;" value={item}>
+          {item.type} {item.i + 1}
+        </option>
+      {/each}
+    </select>
+</form>
 
 <style>
 	.wrapper {
@@ -65,5 +90,9 @@
 			justify-content: space-around;
 		}
 	}
+
+  	select, option, label {
+    	-webkit-text-stroke-width: 0px;
+  	}
 
 </style>

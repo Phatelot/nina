@@ -384,6 +384,14 @@
       "shirt": 2,
       "shorts": 4,
       "plateau": 3
+    },
+    {
+      "day": 178,
+      "weightInLbs": 333,
+      "scale": 2,
+      "shirt": 2,
+      "shorts": 4,
+      "plateau": 3
     }
   ]
 }

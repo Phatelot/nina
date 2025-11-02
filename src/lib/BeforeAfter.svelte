@@ -30,7 +30,7 @@
 
 	const items = getItems();
 	let selectedItem: {
-		type: "shirt" | "shorts" | "plateau",
+		type: "shirt" | "shorts" | "sandals" | "plateau",
 		i: number,
 	} = $state({type: "shirt", i: 0});
 </script>

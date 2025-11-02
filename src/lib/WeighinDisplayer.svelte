@@ -43,7 +43,7 @@
 </script>
 
 <h2 class="title">Day {selectedWeighing.day}</h2>
-{#if (selectedWeighing.scale + selectedWeighing.shirt + selectedWeighing.shorts + selectedWeighing.plateau- 1) > 0}
+{#if (selectedWeighing.scale + selectedWeighing.shirt + selectedWeighing.shorts + selectedWeighing.sandals + selectedWeighing.plateau - 1) > 0}
   <div style="position: absolute">
     <p class="subtitle">Broken</p>
     {#if selectedWeighing.shorts > 0}
@@ -57,6 +57,9 @@
     {/if}
     {#if selectedWeighing.scale > 1}
       <p class="subtitle indented">Scale{selectedWeighing.scale > 1 ? "s": ""}: {selectedWeighing.scale - 1}</p>
+    {/if}
+    {#if selectedWeighing.sandals > 0}
+      <p class="subtitle indented">Sandals: {selectedWeighing.sandals}</p>
     {/if}
   </div>
 {/if}

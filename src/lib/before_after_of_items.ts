@@ -1,6 +1,6 @@
 import { weighings } from './weighings.json'
 
-const itemTypes = ["shirt", "shorts", "plateau"] as const
+const itemTypes = ["shirt", "shorts", "sandals", "plateau"] as const
 type itemType = (typeof itemTypes)[number]
 
 export function getItems(): {type: itemType, i: number}[] {

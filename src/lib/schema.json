@@ -26,6 +26,10 @@
 					"type": "number",
 					"minimum": 0
 				},
+				"sandals": {
+					"type": "number",
+					"minimum": 0
+				},
 				"shirt": {
 					"type": "number",
 					"minimum": 0
@@ -45,6 +49,7 @@
 				"weightInLbs",
 				"scale",
 				"shorts",
+				"sandals",
 				"shirt",
 				"plateau"
 			]

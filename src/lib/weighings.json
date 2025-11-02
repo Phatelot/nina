@@ -6,6 +6,7 @@
       "weightInLbs": 90,
       "scale": 1,
       "shorts": 0,
+      "sandals": 0,
       "shirt": 0,
       "plateau": 0
     },
@@ -14,6 +15,7 @@
       "weightInLbs": 94,
       "scale": 1,
       "shorts": 0,
+      "sandals": 0,
       "shirt": 0,
       "plateau": 0
     },
@@ -22,6 +24,7 @@
       "weightInLbs": 101,
       "scale": 1,
       "shorts": 0,
+      "sandals": 0,
       "shirt": 0,
       "plateau": 0
     },
@@ -30,6 +33,7 @@
       "weightInLbs": 106,
       "scale": 1,
       "shorts": 0,
+      "sandals": 0,
       "shirt": 0,
       "plateau": 0
     },
@@ -38,6 +42,7 @@
       "weightInLbs": 120,
       "scale": 1,
       "shorts": 1,
+      "sandals": 0,
       "shirt": 0,
       "plateau": 0
     },
@@ -46,6 +51,7 @@
       "weightInLbs": 126,
       "scale": 1,
       "shorts": 1,
+      "sandals": 0,
       "shirt": 0,
       "plateau": 0
     },
@@ -54,6 +60,7 @@
       "weightInLbs": 133,
       "scale": 1,
       "shorts": 1,
+      "sandals": 0,
       "shirt": 0,
       "plateau": 0
     },
@@ -62,6 +69,7 @@
       "weightInLbs": 141,
       "scale": 1,
       "shorts": 1,
+      "sandals": 0,
       "shirt": 0,
       "plateau": 0
     },
@@ -70,6 +78,7 @@
       "weightInLbs": 144,
       "scale": 1,
       "shorts": 1,
+      "sandals": 0,
       "shirt": 0,
       "plateau": 0
     },
@@ -78,6 +87,7 @@
       "weightInLbs": 147,
       "scale": 1,
       "shorts": 1,
+      "sandals": 0,
       "shirt": 0,
       "plateau": 0
     },
@@ -86,6 +96,7 @@
       "weightInLbs": 149,
       "scale": 1,
       "shorts": 1,
+      "sandals": 0,
       "shirt": 0,
       "plateau": 1
     },
@@ -94,6 +105,7 @@
       "weightInLbs": 154,
       "scale": 1,
       "shorts": 1,
+      "sandals": 0,
       "shirt": 0,
       "plateau": 1
     },
@@ -102,6 +114,7 @@
       "weightInLbs": 165,
       "scale": 1,
       "shorts": 2,
+      "sandals": 0,
       "shirt": 1,
       "plateau": 1
     },
@@ -110,6 +123,7 @@
       "weightInLbs": 175,
       "scale": 1,
       "shorts": 2,
+      "sandals": 0,
       "shirt": 1,
       "plateau": 1
     },
@@ -118,6 +132,7 @@
       "weightInLbs": 181,
       "scale": 1,
       "shorts": 2,
+      "sandals": 0,
       "shirt": 1,
       "plateau": 1
     },
@@ -126,6 +141,7 @@
       "weightInLbs": 188,
       "scale": 1,
       "shorts": 2,
+      "sandals": 0,
       "shirt": 1,
       "plateau": 1
     },
@@ -134,6 +150,7 @@
       "weightInLbs": 191,
       "scale": 1,
       "shorts": 2,
+      "sandals": 0,
       "shirt": 1,
       "plateau": 1
     },
@@ -142,6 +159,7 @@
       "weightInLbs": 195,
       "scale": 1,
       "shorts": 2,
+      "sandals": 0,
       "shirt": 1,
       "plateau": 1
     },
@@ -150,6 +168,7 @@
       "weightInLbs": 200,
       "scale": 1,
       "shorts": 2,
+      "sandals": 0,
       "shirt": 1,
       "plateau": 1
     },
@@ -158,6 +177,7 @@
       "weightInLbs": 205,
       "scale": 1,
       "shorts": 2,
+      "sandals": 0,
       "shirt": 1,
       "plateau": 1
     },
@@ -166,6 +186,7 @@
       "weightInLbs": 209,
       "scale": 1,
       "shorts": 2,
+      "sandals": 0,
       "shirt": 1,
       "plateau": 1
     },
@@ -174,6 +195,7 @@
       "weightInLbs": 210,
       "scale": 1,
       "shorts": 2,
+      "sandals": 0,
       "shirt": 1,
       "plateau": 2
     },
@@ -182,6 +204,7 @@
       "weightInLbs": 214,
       "scale": 1,
       "shorts": 2,
+      "sandals": 0,
       "shirt": 1,
       "plateau": 2
     },
@@ -190,6 +213,7 @@
       "weightInLbs": 218,
       "scale": 1,
       "shorts": 2,
+      "sandals": 0,
       "shirt": 1,
       "plateau": 2
     },
@@ -198,6 +222,7 @@
       "weightInLbs": 221,
       "scale": 1,
       "shorts": 3,
+      "sandals": 0,
       "shirt": 1,
       "plateau": 2
     },
@@ -206,6 +231,7 @@
       "weightInLbs": 225,
       "scale": 1,
       "shorts": 3,
+      "sandals": 0,
       "shirt": 1,
       "plateau": 2
     },
@@ -214,6 +240,7 @@
       "weightInLbs": 228,
       "scale": 1,
       "shorts": 3,
+      "sandals": 0,
       "shirt": 1,
       "plateau": 2
     },
@@ -222,6 +249,7 @@
       "weightInLbs": 231,
       "scale": 1,
       "shorts": 3,
+      "sandals": 0,
       "shirt": 1,
       "plateau": 2
     },
@@ -230,6 +258,7 @@
       "weightInLbs": 235,
       "scale": 1,
       "shorts": 3,
+      "sandals": 0,
       "shirt": 1,
       "plateau": 2
     },
@@ -238,6 +267,7 @@
       "weightInLbs": 239,
       "scale": 1,
       "shorts": 3,
+      "sandals": 0,
       "shirt": 1,
       "plateau": 2
     },
@@ -246,6 +276,7 @@
       "weightInLbs": 250,
       "scale": 1,
       "shorts": 3,
+      "sandals": 0,
       "shirt": 1,
       "plateau": 2
     },
@@ -254,6 +285,7 @@
       "weightInLbs": 254,
       "scale": 1,
       "shorts": 3,
+      "sandals": 0,
       "shirt": 1,
       "plateau": 2
     },
@@ -262,6 +294,7 @@
       "weightInLbs": 260,
       "scale": 1,
       "shorts": 3,
+      "sandals": 0,
       "shirt": 2,
       "plateau": 2
     },
@@ -270,6 +303,7 @@
       "weightInLbs": 263,
       "scale": 1,
       "shorts": 3,
+      "sandals": 0,
       "shirt": 2,
       "plateau": 2
     },
@@ -278,6 +312,7 @@
       "weightInLbs": 266,
       "scale": 1,
       "shorts": 3,
+      "sandals": 0,
       "shirt": 2,
       "plateau": 2
     },
@@ -286,6 +321,7 @@
       "weightInLbs": 269,
       "scale": 1,
       "shorts": 3,
+      "sandals": 0,
       "shirt": 2,
       "plateau": 2
     },
@@ -294,6 +330,7 @@
       "weightInLbs": 272,
       "scale": 1,
       "shorts": 3,
+      "sandals": 0,
       "shirt": 2,
       "plateau": 3
     },
@@ -302,6 +339,7 @@
       "weightInLbs": 276,
       "scale": 1,
       "shorts": 3,
+      "sandals": 0,
       "shirt": 2,
       "plateau": 3
     },
@@ -310,6 +348,7 @@
       "weightInLbs": 279,
       "scale": 1,
       "shorts": 3,
+      "sandals": 0,
       "shirt": 2,
       "plateau": 3
     },
@@ -318,6 +357,7 @@
       "weightInLbs": 283,
       "scale": 1,
       "shorts": 3,
+      "sandals": 0,
       "shirt": 2,
       "plateau": 3
     },
@@ -326,6 +366,7 @@
       "weightInLbs": 287,
       "scale": 1,
       "shorts": 3,
+      "sandals": 0,
       "shirt": 2,
       "plateau": 3
     },
@@ -334,6 +375,7 @@
       "weightInLbs": 291,
       "scale": 1,
       "shorts": 3,
+      "sandals": 0,
       "shirt": 2,
       "plateau": 3
     },
@@ -342,6 +384,7 @@
       "weightInLbs": 294,
       "scale": 1,
       "shorts": 3,
+      "sandals": 0,
       "shirt": 2,
       "plateau": 3
     },
@@ -351,6 +394,7 @@
       "scale": 1,
       "shirt": 2,
       "shorts": 3,
+      "sandals": 0,
       "plateau": 3
     },
     {
@@ -359,6 +403,7 @@
       "scale": 2,
       "shirt": 2,
       "shorts": 4,
+      "sandals": 0,
       "plateau": 3
     },
     {
@@ -367,6 +412,7 @@
       "scale": 2,
       "shirt": 2,
       "shorts": 4,
+      "sandals": 0,
       "plateau": 3
     },
     {
@@ -375,6 +421,7 @@
       "scale": 2,
       "shirt": 2,
       "shorts": 4,
+      "sandals": 0,
       "plateau": 3
     },
     {
@@ -383,6 +430,7 @@
       "scale": 2,
       "shirt": 2,
       "shorts": 4,
+      "sandals": 0,
       "plateau": 3
     },
     {
@@ -391,6 +439,7 @@
       "scale": 2,
       "shirt": 2,
       "shorts": 4,
+      "sandals": 0,
       "plateau": 3
     },
     {
@@ -399,6 +448,7 @@
       "scale": 2,
       "shirt": 2,
       "shorts": 4,
+      "sandals": 0,
       "plateau": 3
     },
     {
@@ -407,6 +457,7 @@
       "scale": 2,
       "shirt": 2,
       "shorts": 4,
+      "sandals": 0,
       "plateau": 3
     },
     {
@@ -415,6 +466,7 @@
       "scale": 2,
       "shirt": 2,
       "shorts": 4,
+      "sandals": 0,
       "plateau": 3
     }
   ]

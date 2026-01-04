@@ -545,7 +545,7 @@
       "day": 223,
       "weightInLbs": 439,
       "scale": 2,
-      "shirt": 3,
+      "shirt": 4,
       "shorts": 5,
       "sandals": 1,
       "plateau": 3
@@ -554,7 +554,7 @@
       "day": 236,
       "weightInLbs": 449,
       "scale": 2,
-      "shirt": 3,
+      "shirt": 4,
       "shorts": 5,
       "sandals": 1,
       "plateau": 3
@@ -563,16 +563,16 @@
       "day": 239,
       "weightInLbs": 465,
       "scale": 2,
-      "shirt": 3,
+      "shirt": 4,
       "shorts": 5,
       "sandals": 1,
       "plateau": 3
     },
     {
       "day": 240,
-      "weightInLbs": 278,
+      "weightInLbs": 478,
       "scale": 2,
-      "shirt": 3,
+      "shirt": 4,
       "shorts": 5,
       "sandals": 1,
       "plateau": 3
@@ -581,7 +581,7 @@
       "day": 243,
       "weightInLbs": 492,
       "scale": 2,
-      "shirt": 3,
+      "shirt": 4,
       "shorts": 5,
       "sandals": 1,
       "plateau": 3
@@ -590,7 +590,7 @@
       "day": 245,
       "weightInLbs": 500,
       "scale": 2,
-      "shirt": 3,
+      "shirt": 4,
       "shorts": 5,
       "sandals": 1,
       "plateau": 3
